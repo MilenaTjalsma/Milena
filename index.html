@@ -221,6 +221,11 @@ header{
 
 </div><!-- /container -->
 
+<!-- Typgeluid -->
+<audio id="typeSound" preload="auto">
+    <source src="https://www.soundjay.com/typing/sounds/keyboard-1.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 let currentLanguage = "nl";
 
@@ -405,6 +410,8 @@ const educationEN = [
 
 // Elementen
 const typedText          = document.getElementById("typedText");
+const typeSound          = document.getElementById("typeSound");
+typeSound.volume = 0.25;    // pas volume aan (0.05–0.3 is prettig)
 const startBtn           = document.getElementById("startBtn");
 const btnNL              = document.getElementById("btnNL");
 const btnEN              = document.getElementById("btnEN");
@@ -462,6 +469,15 @@ function startTyping(){
 
         buf += ch;
         typedText.innerHTML = buf;
+
+// Typgeluid
+if(ch.trim() !== "") {     // voorkomt geluid op spaties
+    typeSound.currentTime = 0;
+    typeSound.play();
+}
+
+i++;
+
 
         i++;
         if (i >= fullText.length){
