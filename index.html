@@ -7,7 +7,7 @@
 
 <style>
 :root{
-    --accent:#0b63d6; 
+    --accent:#0b63d6;
     --bg:#f6f8fb;
     --card:#ffffff;
     --muted:#6b7280;
@@ -221,8 +221,6 @@ header{
 
 </div><!-- /container -->
 
-
-
 <script>
 let currentLanguage = "nl";
 
@@ -231,7 +229,7 @@ const introNL =
 "Welkom! \n\nGraag neem ik je mee in mijn CV.\n\n" +
 "Mijn naam is Milena Tjalsma-Otten.\n\n" +
 "<strong>Recruiter &amp; Talent Acquisition Specialist</strong> met sterke ervaring in Cyber Security, Tech, IT en niche recruitment.\n" +
-"Ruime achtergrond in leidinggeven, klantcontact, operations en internationale samenwerkingen.\n" +
+"Ruime achtergrond in leidinggeven, klantcontact, operations en internationale samenwerking.\n" +
 "Creatief, mensgericht, analytisch en gespecialiseerd in sourcing op moeilijk vindbare profielen.\n\n";
 
 // Intro-tekst EN
@@ -239,7 +237,7 @@ const introEN =
 "Welcome! \n\nLet me walk you through my profile.\n\n" +
 "My name is Milena Tjalsma-Otten.\n\n" +
 "<strong>Recruiter &amp; Talent Acquisition Specialist</strong> with strong experience in Cyber Security, Tech, IT and niche recruitment.\n" +
-"Background in leadership, customer contact, operations and international collaborations.\n" +
+"Background in leadership, customer contact, operations and international collaboration.\n" +
 "Creative, people-focused, analytical and specialised in sourcing hard-to-find profiles.\n\n";
 
 
@@ -255,7 +253,7 @@ const experienceNL = [
         period:"2023 – heden",
         title:"Cyber Security &amp; Tech Recruiter",
         company:"KPN Talent Acquisition Center · Nederland (hybride)",
-        desc:" Verantwoordelijk voor het aantrekken van cyber security- en tech-professionals. Sourcing, selectie, stakeholdermanagement en het bouwen aan een sterke talentpijplijn binnen een complexe, technische omgeving. Daarnaast bijgedragen aan de implementatie van Smartrecruiters ATS, Admin en verantwoordelijk voor de configuratie van de Smarttips. Tevens admin en champion voor Linked Recruiter Enterprise."
+        desc:"Daarnaast bijgedragen aan de implementatie van Smartrecruiters ATS, Admin en verantwoordelijjk voor de configuratie van de Smarttips. Tevens admin en champion voor Linked Recruiter Enterprise."
     },
     {
         period:"2021 – 2023",
@@ -273,7 +271,7 @@ const experienceNL = [
         period:"2017 – 2020",
         title:"Teamleider Service Mobiel &amp; WeChatGo",
         company:"KPN · Groningen",
-        desc:"Leidinggeven aan een eerstelijns servicedesk voor mobiele telefonie en hotspots. Team zelfredzaam maken, continu verbeteren en coachen op klantgesprekken. Daarnaast teamleider van het Mandarijn sprekende team voor de dienstverlening van Chinese WeChatGo klanten die naar Europa komen."
+        desc:"Leidinggeven aan een eerstelijns servicedesk voor mobiele telefonie, hotspots en WeChatGo-klanten. Team zelfredzaam maken, continu verbeteren en coachen op klantgesprekken."
     },
     {
         period:"2016 – 2017",
@@ -325,7 +323,7 @@ const experienceEN = [
         period:"2023 – present",
         title:"Cyber Security &amp; Tech Recruiter",
         company:"KPN Talent Acquisition Center · Netherlands (hybrid)",
-        desc:"Responsible for attracting cyber security and tech professionals. Sourcing, selection, stakeholder management and building a strong talent pipeline in a complex technical environment."
+        desc:"“Additionally contributed to the implementation of the SmartRecruiters ATS, acting as admin and being responsible for the configuration of SmartTips. Also served as admin and champion for LinkedIn Recruiter Enterprise.”"
     },
     {
         period:"2021 – 2023",
@@ -407,8 +405,6 @@ const educationEN = [
 
 // Elementen
 const typedText          = document.getElementById("typedText");
-const typeSound          = document.getElementById("typeSound");
-typeSound.volume = 0.25;    // pas volume aan (0.05–0.3 is prettig)
 const startBtn           = document.getElementById("startBtn");
 const btnNL              = document.getElementById("btnNL");
 const btnEN              = document.getElementById("btnEN");
@@ -466,15 +462,6 @@ function startTyping(){
 
         buf += ch;
         typedText.innerHTML = buf;
-
-// Typgeluid
-if(ch.trim() !== "") {     // voorkomt geluid op spaties
-    typeSound.currentTime = 0;
-    typeSound.play();
-}
-
-i++;
-
 
         i++;
         if (i >= fullText.length){
